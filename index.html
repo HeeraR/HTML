@@ -4,46 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registeration form</title>
+    <title>Conference Registration Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Conference Registeration form</h1>
-    <form id="Registerationform" action="success.html" method="get">
-        <label for="fname">Full Name</label>
-        <input type="text" name="fname" id="fname" required title="Full name should include only letters and spaces">
+    <form id="RegistrationForm" action="success.html" method="get">
+        <h1>Conference Registration Form</h1>
 
-        <br> <br>
-        <label for="Email">Email:</label>
-        <input type="email" name="email" id="email" required placeholder="abc@gmail.com">
+        <div class="form-group">
+            <label for="fname">Full Name</label>
+            <input type="text" name="fname" id="fname" required title="Full name should include only letters and spaces">
+        </div>
 
-        <br><br>
-        <label for="">Date of Birth</label>
-        <input type="date" name="dob" id="dob">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required placeholder="abc@gmail.com">
+        </div>
 
-        <br> <br>
-        <label for="gender">Gender:</label>
-        <label for=""><input type="radio" name="gender" value="Male" id="">Male</label>
-        <label for=""><input type="radio" name="gender12" value="Female" id="">Female</label>
-        <br> <br>
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" name="dob" id="dob">
+        </div>
 
-        <label for="Interets">Interests:</label>
-        <br>
-        <label for=""><input type="checkbox">Technology</label>
-        <br>
-        <label for=""><input type="checkbox">Science</label>
-        <br>
-        <label for=""><input type="checkbox">Arts</label>
-        <br> <br>
-        <label for="Years of Experience">Years of Experience</label>
-        <br>
-        <label for=""><input type="number" min="0" max="50"></label>
+        <div class="form-group">
+            <label>Gender</label>
+            <div class="form-group inline">
+                <label><input type="radio" name="gender" value="Male"> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+            </div>
+        </div>
 
-        <br><br>
+        <div class="form-group">
+            <label for="interests">Interests</label>
+            <div class="form-group inline">
+                <label><input type="checkbox" name="interests" value="Technology"> Technology</label>
+                <label><input type="checkbox" name="interests" value="Science"> Science</label>
+                <label><input type="checkbox" name="interests" value="Arts"> Arts</label>
+            </div>
+        </div>
 
-        <button type="Submit">Register</button>
+        <div class="form-group">
+            <label for="experience">Years of Experience</label>
+            <input type="number" name="experience" id="experience" min="0" max="50">
+        </div>
 
-
+        <button type="submit">Register</button>
     </form>
 </body>
 
